@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+
+  "name": "Old Logo",
+  "description": "Makes Cap eservices Logo go back to normal.",
+  "version": "1",
+  
+  "content_scripts": [
+ {
+    "matches": [
+  "*://www.capnhq.gov/Default.aspx?ReturnUrl=%2f"
+    ],
+    "run_at":    "document_end",
+    "js": ["content.js"]
+  },
+  {
+    "matches": [
+  "*://www.capnhq.gov/"
+    ],
+    "run_at":    "document_end",
+    "js": ["content2.js"]
+  }
+]
+	
+}
